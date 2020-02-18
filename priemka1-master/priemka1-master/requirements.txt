@@ -1,0 +1,3 @@
+pyTelegramBotAPI
+urllib3
+html-table-parser-python3
