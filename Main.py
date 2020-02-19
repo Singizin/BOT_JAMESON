@@ -41,7 +41,7 @@ def send_text(message):
         keyboard1.keyboard.clear()
         keyboard1.row('/start')
         bot.send_message(message.chat.id, place, reply_markup=keyboard1)
-        bot.send_contact(message.chat.id, phone_number='+79996664444', first_name='Нурсултан', last_name='Назарбаев')
+        #bot.send_contact(message.chat.id, phone_number='+79996664444', first_name='Нурсултан', last_name='Назарбаев')
 
 
 
