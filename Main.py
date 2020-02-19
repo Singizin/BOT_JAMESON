@@ -4,9 +4,9 @@ telebot.apihelper.proxy = {'https': 'https://51.158.111.229:8811'}
 
 bot = telebot.TeleBot('807872124:AAE584RSfGzekXBOF84j1309iNUXE74L7Yg')
 
-place = 'Игорь Перно' \
+place = 'Компания \"Pernod ricard\"\n'\
+        'Игорь Перно\n' \
         '+7(778)471-08-80' \
-        'Компания \"Pernod ricard\"'\
 
 cities = ['Нур-Султан', 'Павлодар']
 cities_low = []
