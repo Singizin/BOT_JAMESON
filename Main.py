@@ -1,6 +1,6 @@
 import telebot
 
-#telebot.apihelper.proxy = {'https': 'https://51.158.111.229:8811'}
+telebot.apihelper.proxy = {'https': 'https://51.158.111.229:8811'}
 
 bot = telebot.TeleBot('807872124:AAE584RSfGzekXBOF84j1309iNUXE74L7Yg')
 
