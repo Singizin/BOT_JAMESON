@@ -1,6 +1,6 @@
 import telebot
 
-#telebot.apihelper.proxy = {'https': 'https://51.158.111.229:8811'}
+telebot.apihelper.proxy = {'https': 'https://51.158.111.229:8811'}
 
 bot = telebot.TeleBot('807872124:AAE584RSfGzekXBOF84j1309iNUXE74L7Yg')
 
@@ -21,7 +21,7 @@ for i in cities:
 
 alco = ['Jameson', 'Сhivas','Absolut','Olmeca','Beefeather','Ballantine\'s']
 alco_low = []
-
+a =''
 for i in alco:
     alco_low.append(i.lower())
 
@@ -38,8 +38,9 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
+    global a
     if message.text.lower() in cities_low:
-        a = p[cities_low.index(a)]
+        a = p[cities_low.index(message.text.lower())]
         keyboard1.keyboard.clear()
         for i in alco:
             keyboard1.row(i)
