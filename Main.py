@@ -5,8 +5,13 @@ telebot.apihelper.proxy = {'https': 'https://51.158.111.229:8811'}
 bot = telebot.TeleBot('807872124:AAE584RSfGzekXBOF84j1309iNUXE74L7Yg')
 
 place = 'Компания \"Pernod ricard\"\n'\
-        'Игорь Перно\n' \
-        '+7(778)471-08-80' \
+        '+7 (778) 471-08-80\n' \
+        'Игорь'\
+place2 = 'Компания «Pernod Ricard»\n'\
+         '+7 (777) 450-82-55\n'\
+         'Леонид'\
+
+p = [place, place2]
 
 cities = ['Нур-Султан', 'Павлодар']
 cities_low = []
@@ -34,6 +39,7 @@ def start_message(message):
 @bot.message_handler(content_types=['text'])
 def send_text(message):
     if message.text.lower() in cities_low:
+        a = p[cities_low.index(a)]
         keyboard1.keyboard.clear()
         for i in alco:
             keyboard1.row(i)
@@ -41,7 +47,7 @@ def send_text(message):
     elif message.text.lower() in alco_low:
         keyboard1.keyboard.clear()
         keyboard1.row('/start')
-        bot.send_message(message.chat.id, place, reply_markup=keyboard1)
+        bot.send_message(message.chat.id, a, reply_markup=keyboard1)
         #bot.send_contact(message.chat.id, phone_number='+79996664444', first_name='Нурсултан', last_name='Назарбаев')
 
 
