@@ -6,10 +6,10 @@ bot = telebot.TeleBot('807872124:AAE584RSfGzekXBOF84j1309iNUXE74L7Yg')
 
 place = 'Компания \"Pernod ricard\"\n'\
         '+7 (778) 471-08-80\n' \
-        'Игорь'\
+        'Игорь'
 place2 = 'Компания «Pernod Ricard»\n'\
          '+7 (777) 450-82-55\n'\
-         'Леонид'\
+         'Леонид'
 
 p = [place, place2]
 
