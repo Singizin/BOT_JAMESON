@@ -11,9 +11,9 @@ place2 = 'Компания «Pernod Ricard»\n'\
          '+7 (777) 450-82-55\n'\
          'Леонид'
 
-p = [place, place2]
+p = [place, place2, place2]
 
-cities = ['Нур-Султан', 'Павлодар']
+cities = ['Нур-Султан', 'Павлодар', 'Алма-Ата']
 cities_low = []
 
 for i in cities:
