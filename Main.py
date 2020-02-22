@@ -10,8 +10,12 @@ place = 'Компания \"Pernod ricard\"\n'\
 place2 = 'Компания «Pernod Ricard»\n'\
          '+7 (777) 450-82-55\n'\
          'Леонид'
+place3 = 'Компания «Pernod Ricard»\n'\
+         '+7 (777) 530-00-66\n'\
+         'Алексей'
 
-p = [place, place2, place2]
+
+p = [place, place2, place3]
 
 cities = ['Нур-Султан', 'Павлодар', 'Алма-Ата']
 cities_low = []
