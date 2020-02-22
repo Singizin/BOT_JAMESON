@@ -1,6 +1,6 @@
 import telebot
 
-telebot.apihelper.proxy = {'https': 'https://51.158.111.229:8811'}
+#telebot.apihelper.proxy = {'https': 'https://51.158.111.229:8811'}
 
 bot = telebot.TeleBot('807872124:AAE584RSfGzekXBOF84j1309iNUXE74L7Yg')
 
@@ -16,7 +16,7 @@ place3 = 'Компания «Pernod Ricard»\n'\
 
 
 p = [place, place2, place3]
-
+bot.send_message(260119686, 'ready')
 cities = ['Нур-Султан', 'Павлодар', 'Алма-Ата']
 cities_low = []
 
@@ -42,6 +42,7 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
+    print(message)
     global a
     if message.text.lower() in cities_low:
         a = p[cities_low.index(message.text.lower())]
@@ -52,7 +53,10 @@ def send_text(message):
     elif message.text.lower() in alco_low:
         keyboard1.keyboard.clear()
         keyboard1.row('найти новую позицию')
-        bot.send_message(message.chat.id, a, reply_markup=keyboard1)
+        if a !='':
+            bot.send_message(message.chat.id, a, reply_markup=keyboard1)
+        else:
+            bot.send_message(message.chat.id, 'Что-то пошло не так... Повротите запрос', reply_markup=keyboard1)
     elif message.text.lower() == 'найти новую позицию':
         keyboard1.keyboard.clear()
         for i in cities:
